@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Task Manager</title>
+    <title>Acoustra Manager</title>
 </head>
 <body id= "body">
 
@@ -19,7 +19,7 @@
 
 		<nav class="nav-extended text-shadow lime darken-4">
 			<div class="nav-wrapper">
-				<a href="{{ url_for('get_tasks') }}" class="brand-logo" img src="logo.png" >Acoustra Manager</a>
+				<a href="{{ url_for('get_tasks') }}" class="brand-logo">Acoustra Manager</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="{{ url_for('get_tasks') }}">Home</a></li>
