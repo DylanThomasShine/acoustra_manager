@@ -17,6 +17,8 @@
 
 #body {
     background-color: black;
+    display:block;
+    width:100%;
 } 
 
 #question {

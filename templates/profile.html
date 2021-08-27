@@ -6,7 +6,7 @@
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <h3 class="center-align text-shadow white-text lime darken-4">
-                    {{ username }}'s Profile
+                    {{ username }}'s Tasks
                 </h3>
                 {% if tasks|length > 0 %}
     <ul class="collapsible">
@@ -14,6 +14,10 @@
         <li>
             <div class="collapsible-header white-text lime darken-4 text-shadow">
                 <div class="col s6">
+                    {% if task.is_urgent == "on" %}
+                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
+                            data-position="right" data-tooltip="URGENT!"></i>
+                    {% endif %}
                     <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
                     : <strong>{{ task.category_name }}</strong>
                 </div>
@@ -23,10 +27,7 @@
                         <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small lime darken-1">Delete</a>
                         <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
                     {% endif %}
-                    {% if task.is_urgent == "on" %}
-                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
-                            data-position="right" data-tooltip="URGENT!"></i>
-                    {% endif %}
+                    
                 </div>
             </div>
             <div class="collapsible-body black-text ">
@@ -41,7 +42,35 @@
         <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
     {% endif %}
 
-                {% if session.user|lower == "admin"|lower %}
+
+    <h3 class="center-align text-shadow white-text lime darken-4">
+        {{ username }}'s Profile
+    </h3>
+    {% if tasks|length > 0 %}
+    <ul class="collapsible">
+        {% for task in tasks %}
+        {% if task.category_name == "Profile" %}
+        <li>
+            
+            <h4 class="center-align text-shadow white-text lime darken-4">
+                    {{ task.task_name }}
+                    </h4>
+                    <p class="band-info black-text">{{ task.task_description }}</p>
+               
+                        <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small lime darken-1">Delete</a>
+                        <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
+                   
+            
+            
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
+    {% endif %}
+
+                {% if session.user|lower == "admin24"|lower %}
                 
             
                 <div>
