@@ -14,3 +14,16 @@
     margin: 5px;
     line-height: 42px;
 }
+
+ #body {
+    background-color: black;
+} 
+
+#question {
+    color:white;
+}
+
+ .brand-logo {
+    margin-left: 10px;
+} 
+
