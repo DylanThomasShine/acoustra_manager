@@ -24,6 +24,10 @@ def get_tasks():
     tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
 
+@app.route("/blogs")
+def get_blogs():
+    tasks = list(mongo.db.tasks.find({"category_name": "Blogs"}))
+    return render_template("blogs.html", tasks=tasks)
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -90,11 +94,13 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
+    tasks = list(mongo.db.tasks.find({"created_by": session["user"]}))
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, tasks=tasks)
 
     return redirect(url_for("login"))
+
+
 
 
 @app.route("/logout")
@@ -119,7 +125,7 @@ def add_task():
         }
         mongo.db.tasks.insert_one(task)
         flash("Task Successfully Added")
-        return redirect(url_for("get_tasks"))
+        return redirect(url_for("get_blogs"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_task.html", categories=categories)

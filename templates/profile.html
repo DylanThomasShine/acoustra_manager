@@ -2,12 +2,48 @@
 {% block content %}
 
     <div class="row">
+        
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <h3 class="center-align text-shadow white-text lime darken-4">
                     {{ username }}'s Profile
                 </h3>
+                {% if tasks|length > 0 %}
+    <ul class="collapsible">
+        {% for task in tasks %}
+        <li>
+            <div class="collapsible-header white-text lime darken-4 text-shadow">
+                <div class="col s6">
+                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+                    : <strong>{{ task.category_name }}</strong>
+                </div>
+                <div class="col s4">
+                    <i class="fas fa-caret-down"></i>
+                    {% if session.user|lower == task.created_by|lower %}
+                        <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small lime darken-1">Delete</a>
+                        <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
+                    {% endif %}
+                    {% if task.is_urgent == "on" %}
+                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
+                            data-position="right" data-tooltip="URGENT!"></i>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="collapsible-body black-text ">
+                <strong>{{ task.category_name }}</strong>
+                <p>{{ task.task_description }}</p>
+                <p><em>by: {{ task.created_by }}</em></p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
+    {% endif %}
 
+                {% if session.user|lower == "admin"|lower %}
+                
+            
                 <div>
                     <h3 class="center-align text-shadow white-text lime darken-4">ABOUT ACOUSTRA</h3>
                     <p class="band-info">Acoustra are one of the most versatile wedding bands you will ever see. 20
@@ -22,8 +58,9 @@
                     </p>
 
                     <div>
-                        <img src="assets/images/logo.png" width="300" height="70" alt="Band Logo"> 
-                        <img class="photo" src="assets/images/photo.jpg" alt="Band performing at a showcase">
+                        
+                        <img src="../static/images/logo.png" width="300" height="70" alt="Band Logo"> 
+                        
                     </div>
 
                     <p>
@@ -41,9 +78,12 @@
                         </ul>
                        </p>
                 </div>
+                {% endif %}
+   
                 <hr>
             </div>
         </div>
     </div>
+    
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="white-text text-shadow  center-align">All Tasks</h3>
+    <h3 class="white-text text-shadow  center-align">Home Feed</h3>
 
     <div class="row card-panel grey lighten-5">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -26,18 +26,18 @@
         {% for task in tasks %}
         <li>
             <div class="collapsible-header white-text lime darken-4 text-shadow">
-                <div class="col s3">
+                <div class="col s9">
+                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }} <p><em>by: {{ task.created_by }}</em></p>
+                    {% if task.is_urgent == "on" %}
+                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
+                            data-position="right" data-tooltip="URGENT!"></i>
+                    {% endif %}
+                </div>
+                <div class="col s3" float="right">
                     <i class="fas fa-caret-down"></i>
                     {% if session.user|lower == task.created_by|lower %}
                         <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small lime darken-1">Delete</a>
                         <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
-                    {% endif %}
-                </div>
-                <div class="col s9">
-                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
-                    {% if task.is_urgent == "on" %}
-                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
-                            data-position="right" data-tooltip="URGENT!"></i>
                     {% endif %}
                 </div>
             </div>
