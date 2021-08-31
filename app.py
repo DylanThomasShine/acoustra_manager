@@ -100,7 +100,15 @@ def profile(username):
 
     return redirect(url_for("login"))
 
+@app.route("/public_profile/<username>", methods=["GET", "POST"])
+def public_profile(username):
+    # grab the session user's username from db
+    
+    tasks = list(mongo.db.tasks.find({"created_by": username}))
+    if session["user"]:
+        return render_template("public_profile.html", username=username, tasks=tasks)
 
+    return redirect(url_for("login"))
 
 
 @app.route("/logout")

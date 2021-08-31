@@ -44,6 +44,7 @@
             <div class="collapsible-body">
                 <strong>{{ task.category_name }}</strong>
                 <p>{{ task.task_description }}</p>
+                <a href="{{ url_for('public_profile', username=task.created_by) }}" class="btn-small lime darken-4">by: {{ task.created_by }}</a>
                 <p><em>by: {{ task.created_by }}</em></p>
             </div>
         </li>

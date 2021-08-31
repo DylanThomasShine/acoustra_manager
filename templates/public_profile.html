@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3 class="center-align text-shadow white-text lime darken-4">
+        {{ username }}'s Profile
+    </h3>
+    {% if tasks|length > 0 %}
+    <ul class="collapsible">
+        {% for task in tasks %}
+        {% if task.category_name == "Profile" %}
+        <li>
+            
+            <h4 class="center-align text-shadow white-text lime darken-4">
+                    {{ task.task_name }}
+                    </h4>
+                    <p class="band-info black-text">{{ task.task_description }}</p>
+               
+                    
+                   
+            
+            
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
+    {% endif %}
+    {% endblock %}
