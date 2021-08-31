@@ -99,7 +99,7 @@ The six colours that are used for the Acoustra Manager website are very similar 
 The **Bebas Neue font** and **Raleway font** are used throughout the whole website. Sans serif and cursive are the fallbacks in case the main font isn’t being imported to the site correctly. The Bebas Neue font is used for all titles, the instruction text, the recipes names, ingredients and other special text that should stand out more. This font is used because the font is all in capital letters and has a sleek appearance. The Raleway font is used for all paragraph text. This font is used because it is easy to read and matches well with the Bebas Neue font. 
 
 - #### Icons
-In the project, icons are used that are provided by [MaterializeCss](https://materializecss.com/). The Icons that are used have functional purposes such as the dropdown menu and social media icons. 
+In the project, icons are used that are provided by [Font Awesome](https://fontawesome.com/). The Icons that are used have functional purposes such as the dropdown menu and social media icons. 
 
 - #### Images
 The images I used for this project came from [Acoustra](https://www.acoustraweddingband.com/). Images are used for the logo and picture on the home page. 

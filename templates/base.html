@@ -11,9 +11,17 @@
     {% endblock %}
     <title>Acoustra Manager</title>
 </head>
-<body id= "body" style="background-image: url('../static/images/photogigbw.jpg'); " >
 
+<body id ="body">
 	<header>
+        <div class="top-social"> 
+            <ul>
+                <li><a href="https://www.facebook.com/Acoustra/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Acoustra?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fab fa-twitter-square"> </i></a></li>
+                <li><a href="https://www.youtube.com/user/acoustra" target="_blank"><i class="fab fa-youtube-square"> </i></a></li>
+                <li><a href="https://open.spotify.com/embed/artist/1IcCTGmLR5P0IZUBXE4FvD" target="_blank"><i class="fab fa-spotify"></i></a></li>
+            </ul>
+        </div>    
 
         <!-- top navbar -->
 
@@ -90,5 +98,18 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
+
+    <footer>      
+        <div class="social-networks">
+            <ul>
+                <li><a href="https://www.facebook.com/Acoustra/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Acoustra?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fab fa-twitter-square"> </i></a></li>
+                <li><a href="https://www.youtube.com/user/acoustra" target="_blank"><i class="fab fa-youtube-square"> </i></a></li>
+                <li><a href="https://open.spotify.com/embed/artist/1IcCTGmLR5P0IZUBXE4FvD" target="_blank"><i class="fab fa-spotify"></i></a></li>
+            </ul>
+            <div class="copyright"><strong>© acoustra music 2020</strong></div>
+            <br><br>
+        </div>
+    </footer>
 </body>
 </html>
