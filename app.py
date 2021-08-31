@@ -6,7 +6,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
-    import env
+    import env as th
 
 
 app = Flask(__name__)
@@ -24,10 +24,12 @@ def get_tasks():
     tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
 
+
 @app.route("/blogs")
 def get_blogs():
     tasks = list(mongo.db.tasks.find({"category_name": "Blogs"}))
     return render_template("blogs.html", tasks=tasks)
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -52,7 +54,7 @@ def register():
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
-        # put the new user into 'session' cookie        
+        # put the new user into 'session'cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
@@ -100,10 +102,10 @@ def profile(username):
 
     return redirect(url_for("login"))
 
+
 @app.route("/public_profile/<username>", methods=["GET", "POST"])
 def public_profile(username):
     # grab the session user's username from db
-    
     tasks = list(mongo.db.tasks.find({"created_by": username}))
     if session["user"]:
         return render_template("public_profile.html", username=username, tasks=tasks)

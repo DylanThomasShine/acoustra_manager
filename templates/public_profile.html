@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h3 class="center-align text-shadow white-text lime darken-4">
-        {{ username }}'s Profile
+        {{ username.capitalize() }}'s Profile
     </h3>
     {% if tasks|length > 0 %}
     <ul class="collapsible">

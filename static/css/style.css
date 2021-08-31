@@ -124,3 +124,12 @@ div.sub, iframe {
     background-color: black;
 
 }
+.modal-content-verify {
+    background-color: black;
+}
+.modal-verify .modal-footer-verify{
+    background-color: black;
+}
+.modal-close-verify{
+    background-color: white;
+}

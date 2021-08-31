@@ -4,9 +4,9 @@
     <div class="row">
         
         <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
+            
                 <h3 class="center-align text-shadow white-text lime darken-4">
-                    {{ username }}'s Tasks
+                    {{ username.capitalize() }}'s Tasks
                 </h3>
                 {% if tasks|length > 0 %}
     <ul class="collapsible">
@@ -15,7 +15,7 @@
             <div class="collapsible-header white-text lime darken-4 text-shadow">
                 <div class="col s6">
                     {% if task.is_urgent == "on" %}
-                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
+                        <i class="fas fa-exclamation-circle text-lighten-2 tooltipped"
                             data-position="right" data-tooltip="URGENT!"></i>
                     {% endif %}
                     <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
@@ -30,11 +30,11 @@
                     
                 </div>
             </div>
-            <div class="collapsible-body black-text ">
+            <div class="collapsible-body ">
                 <strong>{{ task.category_name }}</strong>
                 <p>{{ task.task_description }}</p>
                 <p><em>by: {{ task.created_by }}</em></p>
-            </div>
+            
         </li>
         {% endfor %}
     </ul>
@@ -44,7 +44,7 @@
 
 
     <h3 class="center-align text-shadow white-text lime darken-4">
-        {{ username }}'s Profile
+        {{ username.capitalize() }}'s Profile
     </h3>
     {% if tasks|length > 0 %}
     <ul class="collapsible">
@@ -55,7 +55,7 @@
             <h4 class="center-align text-shadow white-text lime darken-4">
                     {{ task.task_name }}
                     </h4>
-                    <p class="band-info black-text">{{ task.task_description }}</p>
+                    <p class="band-info ">{{ task.task_description }}</p>
                
                         <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small lime darken-1">Delete</a>
                         <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
@@ -70,45 +70,7 @@
         <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
     {% endif %}
 
-                {% if session.user|lower == "admin24"|lower %}
                 
-            
-                <div>
-                    <h3 class="center-align text-shadow white-text lime darken-4">ABOUT ACOUSTRA</h3>
-                    <p class="band-info">Acoustra are one of the most versatile wedding bands you will ever see. 20
-                         years in the entertainment business means we know how to read a crowd and how to interact with
-                        them. Our extensive set incorporates all the music you need for your wedding. <i>Hearing is
-                            believing...</i> We are in our element playing to a full room of people up for a good time.
-                        All the top country classics for jiving, sets of waltzes, 60"s and 70"s classics that everyone
-                        loves to dance to and of course, Irish/Folk and Irish Trad.
-                        With accordion as lead instrument we get the floor hopping with a Siege of Ennis, we play
-                        popular Irish and Folk Ballads, slow songs for intimate moments on the dance floor, Rock and
-                        Roll medleys, Swing and Boogie and up to date chart hits.
-                    </p>
-
-                    <div>
-                        
-                        <img src="../static/images/logo.png" width="300" height="70" alt="Band Logo"> 
-                        
-                    </div>
-
-                    <p>
-                        <ul class="band-promise">
-                           <li>With Acoustra as your wedding band we will learn any song required of us for first dance or any other request.</li>
-                           <li>The band you see on the night will be the band you booked.</li>
-                           <li>We will dress to a colour theme should you so wish.</li>
-                           <li>We will provide entertainment the whole night through.</li>
-                           <li>We will guarantee on time arrival to the hotel.</li>
-                           <li>We will provide a DJ if required and he will perform 
-                               through our set up on the night so there will be zero downtime
-                               from the ending of the band berformance to the beginning of the DJ performance.</li>
-                           <li>We are well behaved and well dressed, professional, very friendly and approachable.</li>
-                           <li>We will work with you up to your big day in any way to help and facilitate your entertainment needs</li>
-                        </ul>
-                       </p>
-                </div>
-                {% endif %}
-   
                 <hr>
             </div>
         </div>
