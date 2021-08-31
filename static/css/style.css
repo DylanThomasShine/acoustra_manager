@@ -43,6 +43,18 @@
     text-align: right;
     margin-bottom: 2px;
     font-size: 100%;
+    min-height: 120px; 
+}
+.input-field{
+    float: right;
+}
+.top-social-search{
+    text-align: right;
+}
+.row card-panel {
+    text-align: right;
+    margin-bottom: 2px;
+    font-size: 100%;
     margin-right: 10px; 
     
     
@@ -98,7 +110,7 @@ footer {
     background: url("https://8080-beige-lark-o0vwlrrn.ws-eu15.gitpod.io/static/images/photogigbw.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
     background-size: cover;
     background-position: right center;
-    min-height: 400px;
+    min-height: 500px;
     width: 100%;
     padding: 15px;
 }
