@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -19,6 +21,7 @@
     background-color: black;
     display:block;
     width:100%;
+    font-family: 'Lato', sans-serif;
 } 
 
 #question {
@@ -49,6 +52,7 @@
 .top-social li {
     display: inline-block;
     padding: 0.5rem;
+    
     
  }
 
@@ -89,4 +93,22 @@ footer {
 .copyright {
     color: white;
     text-shadow: rgba(0, 0, 0, 1.0);
+}
+#image-header {
+    background: url("https://8080-beige-lark-o0vwlrrn.ws-eu15.gitpod.io/static/images/photogigbw.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-size: cover;
+    background-position: right center;
+    min-height: 400px;
+    width: 100%;
+    padding: 15px;
+}
+.vidmain {
+    width:100%;
+    float:left;
+    text-align:center;
+}
+div.sub, iframe {
+    margin: 0 auto;
+    background-color: black;
+
 }
