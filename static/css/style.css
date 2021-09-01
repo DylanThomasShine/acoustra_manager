@@ -133,3 +133,8 @@ div.sub, iframe {
 .modal-close-verify{
     background-color: white;
 }
+
+.photo {
+    width: 100%;
+    display:inline-block;
+}
