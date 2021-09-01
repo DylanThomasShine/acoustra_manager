@@ -139,7 +139,7 @@ Mockup designs are made with [Balsamiq Wireframes](https://balsamiq.com/wirefram
 
 Click on the links below to see the wireframes in Balsamiq.
   
-|[Acoustra Manager](static/images/acoustramanagerwireframes)| 
+|[Acoustra Manager](static/images/acoustramanagerwireframes.pdf)| 
 
 <span id="features"></span>
 
