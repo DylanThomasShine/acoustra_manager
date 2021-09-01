@@ -59,7 +59,7 @@ This project is the third out of four Milestone Projects in the Full Stack Web D
 2. As a first time visitor, I want to be able to navigate easily through the website, so I can find everything with minimul effort. 
 3. As a first time visitor, I want to see an overview of all users, so I can get inspired by other people's stories or queries.
 4. As a first time visitor, I want to be able to search for options by categories, so I can easily find what I'm looking for. 
-5. As a first time visitor, I want to be able to search the site based on key words, so I can find information easily. (For example, I can search the word dates or  all recipes with the ingredient Banana or banana in the recipe name will appear.)
+5. As a first time visitor, I want to be able to search the site based on key words, so I can find information easily. (For example, I can search the word, blogs, tasks, gigs or bookings and those names will appear.)
 6. As a first time visitor, I want to register an account on the website, so I can share my experiences with other users
 7. As a first time visitor, I want to sign up for the newsletter. 
 
@@ -70,7 +70,8 @@ All the goals of first-time visitors also apply for site members. There are addi
 2. As a site member, I want to edit my blogs, so I can update information in them.
 3. As a site member, I want to delete my blogs, so I can remove them if no longer relevant. 
 4. As a site member, I want to login to my profile, so I have access to my information. 
-5. As a site member, I want to logout to my profile, so I can logout from my profile. 
+5. As a site member, I want to logout to my profile, when I leave the site.
+6. As a site member, I want to add a task to find where the band maybe playing or request a date to book them. 
 
 
 **Admin goals:**
@@ -85,7 +86,7 @@ All the goals of the first time visitors and site members also apply for the adm
 ### 1.3 Design 
 
 - #### Colour scheme 
-The six colours that are used for the Acoustra Manager website are very similar to the original website design for the band. I have chosen these colours to remain close to the original color scheme the banfd already use. 
+The five colours that are used for the Acoustra Manager website are very similar to the original website design for the band. I have chosen these colours to remain close to the original color scheme the banfd already use. 
 
 ![Colour scheme](static/images/colorscheme.jpg)
 
@@ -96,7 +97,7 @@ The six colours that are used for the Acoustra Manager website are very similar 
 - **The deep orange accent colour**  is used to show important buttons.
 
 - #### Fonts
-The **Bebas Neue font** and **Raleway font** are used throughout the whole website. Sans serif and cursive are the fallbacks in case the main font isn’t being imported to the site correctly. The Bebas Neue font is used for all titles, the instruction text, the recipes names, ingredients and other special text that should stand out more. This font is used because the font is all in capital letters and has a sleek appearance. The Raleway font is used for all paragraph text. This font is used because it is easy to read and matches well with the Bebas Neue font. 
+The **Lato font** is used throughout the whole website. Sans serif is the fallback in case the main font isn’t being imported to the site correctly. This font is used because it is easy to read. 
 
 - #### Icons
 In the project, icons are used that are provided by [Font Awesome](https://fontawesome.com/). The Icons that are used have functional purposes such as the dropdown menu and social media icons. 
@@ -113,10 +114,8 @@ The images I used for this project came from [Acoustra](https://www.acoustrawedd
     - The add and edit forms:
      - The forms can be filled out to be between 1-5000 characters to allow the user to input their blog.
         - The category has to be chosen.
-        - The image URL must start with http:// or https://.
-        - The number of serves and prepping time has to be numbered.
     - By the email subscriber, the email must be in the following order: characters followed by a @ symbol, followed by more characters and then a “.”.
-    - A recipe or category can't be deleted by just one click. If someone clicks on the delete button, there wil be a pop up with a confirmation if someone is sure to delete the recipe or category.
+    - A blog, task or category can't be deleted by just one click. If someone clicks on the delete button, there wil be a pop up with a confirmation if someone is sure to delete the blog, task or category.
 
 - #### Interactive design 
 
@@ -128,14 +127,14 @@ The images I used for this project came from [Acoustra](https://www.acoustrawedd
 <span id="ux-architecture"></span>
 
 ### 1.4 Information architecture
-The project has four collections in the database. The database structure in MongoDB is as follows: 
+The project has three collections in the database. The database in MongoDB is as follows: 
 
-![Information architecture](readme_img/information-architecture.png)
+![Information architecture](static/images/mongoimage.png)
 
 <span id="ux-mockup"></span>
 
-### 1.5 Mockup designs
-Mockup designs are made with [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
+### 1.5 Wireframe designs
+Wireframe designs are made with [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
 
 Click on the links below to see the wireframes in Balsamiq.
   
@@ -152,19 +151,19 @@ Click on the links below to see the wireframes in Balsamiq.
 #### 1. Design 
 - An attractive and simple layout with consistency.
 - Simple navigation throughout the website by using the navigation bar. 
-- Showing the recipes .simple and clearly
+- Showing the blogs and tasks with clarity.
 
 #### 2. General 
-- The index page shows an introduction in the shape of a header and introduction text. And the page shows a couple of new recipes. 
-- There are links to the social media platforms at the top and bottom of the website. 
+- The index page shows an introduction in the shape of a logo for the band and navbar menu. And the page shows an image of the band and a link to a video.
+- There are links to the social media platforms at the bottom of the website. 
 - People can sign up for the newsletter. 
 
-#### 3. Recipes
-- Recipes can be created, read, updated and deleted (CRUD) by the users. 
-- Recipes can be sorted by category.
-- People can search for recipes with the search bar. 
-- Users have access to their profile, with an overview of all their recipes. 
-- Recipes include ingredients, instructions, tips, prepping time and serves.
+#### 3. Blogs & Tasks
+- Blogs and Tasks can be created, read, updated and deleted (CRUD) by the users. 
+- Blogs and Tasks can be sorted by category.
+- People can search for Blogs and Tasks with the search bar. 
+- Users have access to their profile, with an overview of all their Blogs and Tasks. 
+- Blogs and Tasks include information the user wishes to share or quries they want answered.
 
 #### 4. Signup, login and logout 
 - People can create a new account on the web application. 
@@ -175,10 +174,9 @@ Click on the links below to see the wireframes in Balsamiq.
 <span id="features-future"></span>
 
 ### 2.2 Features left to implement in the future 
-- Changing the number of ingredients based on the number of people.
-- Adding a favorite section. Users can favorite a recipe and see them on their favorite page. 
-- On the overview of recipes multiple pages with all recipes, instead of a long list of all recipes. 
-- For an image of the recipe, users have to fill in the image URL. For the future, there also can be an option to upload the image. 
+- A proper method to respond to a member.
+- Adding a favorite section. Users can favorite a rBlog or Task and see them on their favorite page. 
+- Users could have the ability to upload pictures to their profile   
 - Add form validation on the backend.
 - The user can delete their profile.
 
@@ -205,8 +203,8 @@ Click on the links below to see the wireframes in Balsamiq.
     - The GitHub is used to host the project.
 - [Google Fonts](https://fonts.google.com/)
     - Google Fonts is used to provide the font roboto for all the text that is used in the project. 
-- [Figma](https://www.figma.com/)
-    - Figma is used to create the mockup designs for the project.
+- [Balsamiq](https://balsamiq.com/wireframes/)
+    - Balsamiq is used to create the mockup designs for the project.
 - [Materialize](https://materializecss.com/)
     - Materialize is used for the design framework.
 - [MobgoDB](https://www.mongodb.com/1)
@@ -260,7 +258,7 @@ To make a local clone, follow the following steps.
 2. Create a database in MongoDB  
     - Signup or login to your MongoDB account.
     - Create a cluster and a database.
-    - Create four collections in the db: **categories, recipes, subscribers, users.**
+    - Create three collections in the db: **categories, tasks, users.**
     - Add string values for the collections. See <a href="#ux-architecture">my Information architecture</a> how the database is set up for this project.
 3. Create the environment variables 
     - Create a .gitignore file in the root directory of the project.
@@ -305,49 +303,27 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 
 <h1>6. Credits</h1>
 
-#### Recipes
-- Green smoothie - [Goodfood](https://www.bbcgoodfood.com/recipes/kale-smoothie) by Sophie Godwin. 
-- Avocado smoothie - [Chocolate Covered Katie](https://chocolatecoveredkatie.com/avocado-smoothie-recipe/)
-- Healthy oatmeal - [Fit foodie](https://fitfoodiefinds.com/the-50-best-oatmeal-recipes-on-the-planet/) by Lee Funke
-- Egg Benedict - [Eat Smarter!](https://eatsmarter.com/recipes/salmon-and-spinach-eggs-benedict-with-butter-sauce)
-- Banana oatmeal - [Everyday Delicious](https://www.everyday-delicious.com/banana-peanut-butter-and-pomegranate-oatmeal/) by Aleksandra 
-- Classic waffles - [All recipes](https://www.allrecipes.com/recipe/20513/classic-waffles/) by Megan
-- Banana pancakes - [Minimalist Baker](https://minimalistbaker.com/5-ingredient-banana-egg-pancakes/)
-- Fluffy pancakes - [Chocolate Sandchai](https://www.chocolatesandchai.com/fluffy-fluffy-pancakes/) by Riz
-- Sunny eggs - [Jamie Oliver](https://www.jamieoliver.com/recipes/eggs-recipes/sunny-side-up-eggs/)
-
-
-#### Media 
-- Header image - [Elle Hughes](https://www.pexels.com/nl-nl/@elletakesphotos).
-- Green smoothie - Pexels by [Alisha Mishra](https://www.pexels.com/nl-nl/@alisha-mishra-579430).
-- Avocado smoothie - Pexels by  [Emilia Czarnota](https://www.pexels.com/nl-nl/@emilia-czarnota-3807932)
-- Healthy oatmeal - Pexels by  [Keegan Evans](https://www.pexels.com/nl-nl/@keegan-evans-10986)
-- Egg Benedict - Pexels by [Brett Jordan](https://www.pexels.com/nl-nl/@brettjordan)
-- Banana oatmeal - Pexels by [Hanna Brannigan](https://www.pexels.com/nl-nl/@hana-brannigan-2014526)
-- Classic waffles - Pexels by [Jill Wellington](https://www.pexels.com/nl-nl/@jill-wellington-1638660) 
-- Banana pancakes - Pexels by [Hanna Brannigan](https://www.pexels.com/nl-nl/@hana-brannigan-2014526)
-- Fluffy pancakes - Pexels by [Elif Tekkaya](https://www.pexels.com/nl-nl/@eliftekkaya) 
-- Sunny eggs - Pexels by [Daniele Constantini](https://www.pexels.com/nl-nl/@daniela-constantini)
-
 #### Code
 - [Flask error handling - Python on the web - Learning Flask ep. 18](https://www.youtube.com/watch?v=mBKKZN1MMBM)
 - [W3Schools: HTML Input Pattern Attribute](https://www.w3schools.com/tags/att_input_pattern.asp)
 - [W3Schools: HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
+- [MaterializeCss: CSS Input Attributes](https://materializecss.com/)
+- [Tim Neilson: Mini Project Walkthrough](https://codeinstitute.net/)
 
 <span id="Acknowledge"></span>
 
 <h1>7. Acknowledge</h1>
 
 Thanks to the following people and organizations who helped or inspired me for the project:  
-- The support and guidance of my mentor Precious Ijege. 
+- The support and guidance of Kieron and Johann in Code Institute. 
 - The lessons and knowledge of [Code Institute.](https://codeinstitute.net/)
-- The advice about a bug of Igor and Cormac from the Tutor Assistance 
+
 
 <span id="Disclaimer"></span>
 
 <h1>8. Disclaimer</h1>
-This project is for educational purposes only. If there is an issue with the copyright or the content, please contact me: juan.stelling@gmail.com
+This project is for educational purposes only. All rights to the content was given by Acoustra's full consent for this project.
 
-Thanks for visiting
+Thanks You
 
-<a href="#breaktasty">Back to top!</a>
+<a href="#Acoustra Manager">Back to top!</a>
