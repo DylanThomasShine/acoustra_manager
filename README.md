@@ -135,12 +135,11 @@ The project has four collections in the database. The database structure in Mong
 <span id="ux-mockup"></span>
 
 ### 1.5 Mockup designs
-Mockup designs are made with [Figma.](https://www.figma.com/)
+Mockup designs are made with [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
 
-Click on the links below to see the mockups in Figma.
-|    Mobile   |    Tablet / Desktop   | 
-|    :----:    |     :----:   |   
-|[Breaktasty](https://www.figma.com/file/Zpsh41nfyS4l6gvxwEPGdM/MS3-BREAKTASTY.?node-id=2%3A681)|[Breaktasty](https://www.figma.com/file/Zpsh41nfyS4l6gvxwEPGdM/MS3-BREAKTASTY.?node-id=0%3A1) | 
+Click on the links below to see the wireframes in Balsamiq.
+  
+|[Acoustra Manager](static/images/acoustramanagerwireframes)| 
 
 <span id="features"></span>
 
