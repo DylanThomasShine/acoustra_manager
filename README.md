@@ -10,7 +10,7 @@ Acoustra Manager is designed to be user friendly and easy access and navigate ar
 
 This project is the third out of four Milestone Projects in the Full Stack Web Development Program I am attending at The Code Institute.
 
-**[View the live project here.](https://ms3-breaktasty.herokuapp.com/)**
+**[View the live project here.](https://acoustra-manager.herokuapp.com/)**
 
 ---
 
