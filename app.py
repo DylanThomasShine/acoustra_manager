@@ -16,6 +16,7 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+# main return for all tasks to populate views of all categories
 
 
 @app.route("/")
@@ -23,12 +24,14 @@ mongo = PyMongo(app)
 def get_tasks():
     tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
+# a subset of tasks for only main page blog post by users
 
 
 @app.route("/blogs")
 def get_blogs():
     tasks = list(mongo.db.tasks.find({"category_name": "Blogs"}))
     return render_template("blogs.html", tasks=tasks)
+# main search
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -102,6 +105,8 @@ def profile(username):
 
     return redirect(url_for("login"))
 
+# return only posts for the slected user
+
 
 @app.route("/public_profile/<username>", methods=["GET", "POST"])
 def public_profile(username):
@@ -120,6 +125,8 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+# add task
 
 
 @app.route("/add_task", methods=["GET", "POST"])
@@ -141,6 +148,8 @@ def add_task():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_task.html", categories=categories)
 
+# edit task
+
 
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
@@ -161,6 +170,8 @@ def edit_task(task_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_task.html", task=task, categories=categories)
 
+# delete task
+
 
 @app.route("/delete_task/<task_id>")
 def delete_task(task_id):
@@ -168,11 +179,15 @@ def delete_task(task_id):
     flash("Task Successfully Deleted")
     return redirect(url_for("get_tasks"))
 
+# get categories
+
 
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
+
+# add categories
 
 
 @app.route("/add_category", methods=["GET", "POST"])

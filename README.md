@@ -122,7 +122,7 @@ The images I used for this project came from [Acoustra](https://www.acoustrawedd
     - The website has to be easy to navigate. 
     - The user can quickly find the information he/she wants to find. 
 
-![Interactive design](readme_img/interactive-design.png)
+
 
 <span id="ux-architecture"></span>
 
@@ -238,7 +238,13 @@ Click on the link below to see the wireframes in Balsamiq.
 The testing process can be found [here](static/images/validatorerrors.jpg).
 <br>
 The results can be found [here](static/images/validatorpass2.jpg).
+<br>
+
+Test matrix on all devices attached [here](static/images/screenmatrix.jpg).
+<br>
+I used the design goals above when the application was completed to build a set of test users stories to confirm that all functionality conformed to the requirements.
 <span id="deployment"></span>
+
 
 <h1>5. Deployment</h1>
 
