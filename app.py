@@ -6,7 +6,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
-    import env 
+    import env
 
 
 app = Flask(__name__)
@@ -108,7 +108,8 @@ def public_profile(username):
     # grab the session user's username from db
     tasks = list(mongo.db.tasks.find({"created_by": username}))
     if session["user"]:
-        return render_template("public_profile.html", username=username, tasks=tasks)
+        return render_template("public_profile.html",
+                               username=username, tasks=tasks)
 
     return redirect(url_for("login"))
 

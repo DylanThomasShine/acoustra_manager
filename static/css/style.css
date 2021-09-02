@@ -17,11 +17,12 @@
     line-height: 42px;
 }
 
-#body {
+#main {
     background-color: black;
     display: block;
     width: 100%;
     font-family: 'Lato', sans-serif;
+    
 }
 
 #question {
@@ -59,29 +60,32 @@
     margin-bottom: 2px;
     font-size: 100%;
     margin-right: 10px;
-
-
-
 }
 
 .top-social li {
     display: inline-block;
     padding: 0.5rem;
-
-
 }
 
 .top-social i {
     color: #827717;
+}
 
+.sidenav {
+    background-color: #827717;
+}
+
+.sidenav li a{
+    color: white;
 }
 
 /*-- footer section --*/
 
 footer {
+    position: absolute;
     background-color: #827717;
     width: 100%;
-    height: 200px;
+    height: 200px;   
 }
 
 .social-networks {
@@ -107,7 +111,7 @@ footer {
 
 .copyright {
     color: white;
-    text-shadow: rgba(0, 0, 0, 1.0);
+    
 }
 
 #image-header {
