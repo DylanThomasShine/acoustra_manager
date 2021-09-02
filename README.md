@@ -4,7 +4,7 @@
 
 ![Portfolio website](static/images/logo.png)
 
-Welcome to Acoustra Manager where you get the opportunity to create your own profile directly on the band's website. You will have the means to create your own blogs and tasks and can edit, delete and update them. You will have access to available iunformation the band have along with merchandising as well. You can select a date you may be interested in coming to seee the band play or simply send in a request to see if they are available to come play in your neck of the woods.
+Welcome to Acoustra Manager where you get the opportunity to create your own profile directly on the band's website. You will have the means to create your own blogs and tasks and can edit, delete and update them. You will have access to available information the band have along with merchandising as well. You can select a date you may be interested in coming to seee the band play or simply send in a request to see if they are available to come play in your neck of the woods.
 
 Acoustra Manager is designed to be user friendly and easy access and navigate around the pages. It is customisable to suit the user's needs enabling them to have full control over any input they have. The Admin's page can be viewed but cannot be editied adn that also applies to each individual user, they can create their own page but cannot alter another members page or input.
 
