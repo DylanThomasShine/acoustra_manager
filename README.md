@@ -4,9 +4,9 @@
 
 ![Portfolio website](static/images/logo.png)
 
-Welcome to Acoustra Manager where you get the opportunity to create your own profile directly on the band's website. You will have the means to create your own blogs and tasks and can edit, delete and update them. You will have access to available information the band have along with merchandising as well. You can select a date you may be interested in coming to seee the band play or simply send in a request to see if they are available to come play in your neck of the woods.
+Welcome to Acoustra Manager where you get the opportunity to create your own profile directly on the band's website. You will have the means to create your own blogs and tasks and can edit, delete and update them. You will have access to available information the band have along with merchandising as well. You can select a date you may be interested in coming to see the band play or simply send in a request to see if they are available to come play in your neck of the woods.
 
-Acoustra Manager is designed to be user friendly and easy access and navigate around the pages. It is customisable to suit the user's needs enabling them to have full control over any input they have. The Admin's page can be viewed but cannot be editied adn that also applies to each individual user, they can create their own page but cannot alter another members page or input.
+Acoustra Manager is designed to be user friendly and easy access and navigate around the pages. It is customisable to suit the user's needs enabling them to have full control over any input they have. The Admin's page can be viewed but cannot be edited and that also applies to each individual user, they can create their own page but cannot alter another members page or input.
 
 This project is the third out of four Milestone Projects in the Full Stack Web Development Program I am attending at The Code Institute.
 
@@ -45,7 +45,7 @@ This project is the third out of four Milestone Projects in the Full Stack Web D
 - Making a full-stack site that allows users to manage a common dataset about a particular domain. 
 - Making a full-stack site that uses HTML, CSS, JavaScript, Python+Flask and MongoDB.
 
-- Creating a website that serves as a platform where people can access band information and get involved in a more personal manner. They can create stories of their own experience with the band and check for live performances.
+- Creating a website that serves as a platform where people can access band information and get involved in a more personal manner. They can create stories of their own experience with the band and check for live performances. A user can also request a booking for the band.
 
 - Creating a website that is simple to understand and easy to navigate.
 - The users of the website can make use of CRUD (create, read, update and delete) for the information they wish to include. 
@@ -175,7 +175,7 @@ Click on the link below to see the wireframes in Balsamiq.
 
 ### 2.2 Features left to implement in the future 
 - A proper method to respond to a member.
-- Adding a favorite section. Users can favorite a rBlog or Task and see them on their favorite page. 
+- Adding a favorite section. Users can favorite a Blog or Task and see them on their favorite page. 
 - Users could have the ability to upload pictures to their profile   
 - Add form validation on the backend.
 - The user can delete their profile.
@@ -202,7 +202,7 @@ Click on the link below to see the wireframes in Balsamiq.
 - [GitHub](https://github.com/)
     - The GitHub is used to host the project.
 - [Google Fonts](https://fonts.google.com/)
-    - Google Fonts is used to provide the font roboto for all the text that is used in the project. 
+    - Google Fonts is used to provide the font lato for all the text that is used in the project. 
 - [Balsamiq](https://balsamiq.com/wireframes/)
     - Balsamiq is used to create the mockup designs for the project.
 - [Materialize](https://materializecss.com/)
@@ -210,7 +210,7 @@ Click on the link below to see the wireframes in Balsamiq.
 - [MobgoDB](https://www.mongodb.com/1)
     - MongoDB is the fully managed cloud database service used for the project.
 - [Heroku](https://dashboard.heroku.com/)
-    - Heroki is the cloud platform to deploying the app.
+    - Heroku is the cloud platform to deploying the app.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
     - Flask is the web framework used to provide libraries, tools and technologies for the app.
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
@@ -226,8 +226,8 @@ Click on the link below to see the wireframes in Balsamiq.
     - The W3C Markup Validation Service is used to check whether there were any errors in the HTML5 code. 
 - [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
     - The W3C CSS validator is used to check whether there were any errors in the CSS3 code.
-- [JShint](https://jshint.com/)
-    - JShint is a JavaScript validator that is used to check whether there were any errors in the JavaScript code. 
+- [Beautify Tools](https://beautifytools.com/)
+    - Beautify Tools is a JavaScript validator that is used to check whether there were any errors in the JavaScript code. 
 - [PEP8](http://pep8online.com/)
     - The PEP8 validator is used to check whether there were any errors in the Python code.
 
@@ -312,10 +312,11 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 
 <span id="Acknowledge"></span>
 
-<h1>7. Acknowledge</h1>
+<h1>7. Acknowledgements</h1>
 
 Thanks to the following people and organizations who helped or inspired me for the project:  
 - The support and guidance of Kieron and Johann in Code Institute. 
+- Eoin Lynch for his incredible support throughout this project. 
 - The lessons and knowledge of [Code Institute.](https://codeinstitute.net/)
 
 
@@ -324,6 +325,6 @@ Thanks to the following people and organizations who helped or inspired me for t
 <h1>8. Disclaimer</h1>
 This project is for educational purposes only. All rights to the content was given by Acoustra's full consent for this project.
 
-Thanks You
+Thank You
 
-<a href="#Acoustra Manager">Back to top!</a>
+<a href="#acoustra">Back to top!</a>
