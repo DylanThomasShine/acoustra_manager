@@ -10,21 +10,18 @@
         <p id="pic-small">With a soundtrack for every occasion .</p>
     </div>
 </div>
-<div class="vidmain">
-    <div class="sub"><iframe  src="https://www.youtube.com/embed/F-ys7x1zT8c"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </div>
-</div>
+
 <div class="row">
     {% if tasks|length > 0 %}
 
     <ul class="collapsible">
         {% for task in tasks %}
+        
         <li>
+            
             <div class="collapsible-header white-text lime darken-4 text-shadow">
                 <div class="col s9">
+                    <i class="fas fa-caret-down"></i>
                     <strong>{{ task.task_name }}</strong> : {{ task.due_date }} <p><em>by: {{ task.created_by }}</em>
                     </p>
                     {% if task.is_urgent == "on" %}
@@ -32,8 +29,8 @@
                         data-tooltip="URGENT!"></i>
                     {% endif %}
                 </div>
-                <div class="col s3" float="right">
-                    <i class="fas fa-caret-down"></i>
+                <div class="col s4" float="right">
+                    
                     {% if session.user|lower == task.created_by|lower %}
                     <a class="modal-trigger change-button btn-small lime darken-1"
                         href="#modal{{ loop.index }}">Delete</a>

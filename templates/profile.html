@@ -13,6 +13,7 @@
             <li>
                 <div class="collapsible-header white-text lime darken-4 text-shadow">
                     <div class="col s12">
+                        <i class="fas fa-caret-down"></i>
                         {% if task.is_urgent == "on" %}
                         <i class="fas fa-exclamation-circle text-lighten-2 tooltipped" data-position="right"
                             data-tooltip="URGENT!"></i>
@@ -21,7 +22,7 @@
                         : <strong>{{ task.category_name }}</strong>
                     </div>
                     <div class="col s12">
-                        <i class="fas fa-caret-down"></i>
+                        
                         {% if session.user|lower == task.created_by|lower %}
                         <a class="modal-trigger change-button btn-small lime darken-1"
                         href="#modal{{ loop.index }}">Delete</a>
@@ -89,7 +90,7 @@
         {% else %}
         <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
         {% endif %}
-        <hr>
+        
     </div>
 </div>
 </div>
