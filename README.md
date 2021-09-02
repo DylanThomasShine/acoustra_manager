@@ -235,7 +235,7 @@ Click on the link below to see the wireframes in Balsamiq.
 
 <h1>4. Testing</h1>
 
-The testing process can be found [here](TESTING.md).
+The testing process can be found [here](static/images/validatorerrors.jpg).
 
 <span id="deployment"></span>
 
