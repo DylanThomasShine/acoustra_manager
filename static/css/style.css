@@ -115,10 +115,10 @@ footer {
 }
 
 #image-header {
-    background: url("https://8080-beige-lark-o0vwlrrn.ws-eu15.gitpod.io/static/images/photogigbw.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background: url("https://8080-tomato-flea-kfbazbs4.ws-eu16.gitpod.io/static/images/photogigbw.jpg");
     background-size: cover;
-    background-position: right center;
-    min-height: 500px;
+    background-position: center;
+    height: 500px;;
     width: 100%;
     padding: 15px;
 }
@@ -133,6 +133,8 @@ div.sub,
 iframe {
     margin: 0 auto;
     background-color: black;
+    width:100%;
+    height:250px;
 
 }
 
@@ -151,4 +153,23 @@ iframe {
 .photo {
     width: 100%;
     display: inline-block;
+}
+
+.container {
+    min-height:900px;
+}
+#pic-text{
+    padding-top: 20%;
+    padding-left: 55%;
+    margin-bottom: 0;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+#pic-small{
+    padding-left: 55%;
+    margin-top: 0;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }

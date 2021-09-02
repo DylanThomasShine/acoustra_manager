@@ -24,9 +24,22 @@
        <!-- edit & delete section-->
 
             <div class="card-action">
-                <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn lime darken-1">Edit</a>
-                <a href="{{ url_for('delete_category', category_id=category._id) }}"
-                    class="btn lime darken-4">Delete</a>
+                <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn-small lime darken-4">Edit</a>
+                <a class="modal-trigger change-button btn-small lime darken-1"
+                        href="#modal{{ loop.index }}">Delete</a>
+
+                    <!-- Modal delete Section -->
+
+                    <div id="modal{{ loop.index }}" class="modal" style="background-color: rgb(219, 87, 47);">
+                            <div class="modal-content black-text" style="background-color: rgb(219, 87, 47);">
+                                <h5> Are you sure you want to delete {{ category.category_name }}?</h5>
+                            </div>
+                            <div class="modal-footer" style="background-color: rgb(219, 87, 47);">
+                                <a href="{{ url_for('get_categories') }}" class="modal-close  black-text btn-flat">Cancel</a>
+                                <a href="{{ url_for('delete_category', category_id=category._id) }}"
+                                    class="modal-close black-text btn-flat">Delete</a>
+                            </div>
+                    </div>
             </div>
         </div>
     </div>

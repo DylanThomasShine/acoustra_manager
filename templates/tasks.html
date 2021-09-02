@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="white-text text-shadow  center-align">All Blogs</h3>
+<h3 class="white-text text-shadow  center-align">All Admin Tasks</h3>
 
 
 
@@ -14,7 +14,7 @@
             <div class="col s3">
 
                 <i class="fas fa-caret-down"></i>
-                {% if session.user|lower == task.created_by|lower %}
+                {% if session.user|lower == "admin" %}
                 <a class="modal-trigger change-button btn-small lime darken-1" href="#modal{{ loop.index }}">Delete</a>
                 <!-- Modal delete Structure -->
                 <div id="modal{{ loop.index }}" class="modal">
