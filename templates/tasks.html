@@ -1,53 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="white-text text-shadow  center-align">All Blogs</h3>
+<h3 class="white-text text-shadow  center-align">All Blogs</h3>
 
-    
 
-    {% if tasks|length > 0 %}
-    <ul class="collapsible">
-        {% for task in tasks %}
-        <li>
-            
-            <div class="collapsible-header white-text lime darken-4 text-shadow">
-                <div class="col s3">
-                    
-                    <i class="fas fa-caret-down"></i>
-                    {% if session.user|lower == task.created_by|lower %}
-                    <a class="modal-trigger change-button btn-small lime darken-1" href="#modal{{ loop.index }}">Delete</a>
-                                <!-- Modal delete Structure -->
-                                <div id="modal{{ loop.index }}" class="modal">
-                                    <div class="modal-content black-text" style="background-color: rgb(219, 87, 47);">
-                                        <h5> Are you sure you want to delete {{ task.task_name}}?</h5>
-                                    </div>
-                                    <div class="modal-footer" style="background-color: rgb(219, 87, 47);">
-                                        <a href="{{ url_for('get_tasks') }}" class="modal-close  btn-flat">Cancel</a>
-                                        <a href="{{ url_for('delete_task', task_id=task._id) }}" class="modal-close btn-flat">Delete</a>
-                                    </div>
-                                </div>
-                        <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
-                    {% endif %}
+
+{% if tasks|length > 0 %}
+<ul class="collapsible">
+    {% for task in tasks %}
+    <li>
+
+        <div class="collapsible-header white-text lime darken-4 text-shadow">
+            <div class="col s3">
+
+                <i class="fas fa-caret-down"></i>
+                {% if session.user|lower == task.created_by|lower %}
+                <a class="modal-trigger change-button btn-small lime darken-1" href="#modal{{ loop.index }}">Delete</a>
+                <!-- Modal delete Structure -->
+                <div id="modal{{ loop.index }}" class="modal">
+                    <div class="modal-content black-text" style="background-color: rgb(219, 87, 47);">
+                        <h5> Are you sure you want to delete {{ task.task_name}}?</h5>
+                    </div>
+                    <div class="modal-footer" style="background-color: rgb(219, 87, 47);">
+                        <a href="{{ url_for('get_tasks') }}" class="modal-close  btn-flat">Cancel</a>
+                        <a href="{{ url_for('delete_task', task_id=task._id) }}" class="modal-close btn-flat">Delete</a>
+                    </div>
                 </div>
-                <div class="col s9">
-                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
-                    {% if task.is_urgent == "on" %}
-                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
-                            data-position="right" data-tooltip="URGENT!"></i>
-                    {% endif %}
-                </div>
+                <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
+                {% endif %}
             </div>
-            <div class="collapsible-body">
-                <strong>{{ task.category_name }}</strong>
-                <p>{{ task.task_description }}</p>
-                <p><em>by: {{ task.created_by }}</em></p>
-                
+            <div class="col s9">
+                <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+                {% if task.is_urgent == "on" %}
+                <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped" data-position="right"
+                    data-tooltip="URGENT!"></i>
+                {% endif %}
             </div>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-        <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
-    {% endif %}
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ task.category_name }}</strong>
+            <p>{{ task.task_description }}</p>
+            <p><em>by: {{ task.created_by }}</em></p>
+
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
+{% endif %}
 
 {% endblock %}

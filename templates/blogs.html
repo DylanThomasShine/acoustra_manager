@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-    
 
-    
-    <div class="row" id="image-header">
-        <div class="col s12 intro-text">
-            <img class="photo" src="static/images/photogigbw.jpg" alt="Band performing">
-         
-        </div>
+
+
+<div class="row" id="image-header">
+    <div class="col s12 intro-text">
+        <img class="photo" src="static/images/photogigbw.jpg" alt="Band performing">
+
     </div>
-    <div class="vidmain">  <div class="sub"><iframe width="560" height="315" src="https://www.youtube.com/embed/F-ys7x1zT8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+</div>
+<div class="vidmain">
+    <div class="sub"><iframe width="560" height="315" src="https://www.youtube.com/embed/F-ys7x1zT8c"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </div>
-    <div class="row">
+</div>
+<div class="row">
     {% if tasks|length > 0 %}
 
     <ul class="collapsible">
@@ -21,41 +25,47 @@
         <li>
             <div class="collapsible-header white-text lime darken-4 text-shadow">
                 <div class="col s9">
-                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }} <p><em>by: {{ task.created_by }}</em></p>
+                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }} <p><em>by: {{ task.created_by }}</em>
+                    </p>
                     {% if task.is_urgent == "on" %}
-                        <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped"
-                            data-position="right" data-tooltip="URGENT!"></i>
+                    <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped" data-position="right"
+                        data-tooltip="URGENT!"></i>
                     {% endif %}
                 </div>
                 <div class="col s3" float="right">
                     <i class="fas fa-caret-down"></i>
                     {% if session.user|lower == task.created_by|lower %}
-                    <a class="modal-trigger change-button btn-small lime darken-1" href="#modal{{ loop.index }}">Delete</a>
-                    <!-- Modal delete Structure -->
+                    <a class="modal-trigger change-button btn-small lime darken-1"
+                        href="#modal{{ loop.index }}">Delete</a>
+
+                    <!-- Modal delete Section -->
+
                     <div id="modal{{ loop.index }}" class="modal" style="background-color: rgb(219, 87, 47);">
-                        <div class="modal-content black-text" style="background-color: rgb(219, 87, 47);">
-                            <h5> Are you sure you want to delete {{ task.task_name}}?</h5>
-                        </div>
-                        <div class="modal-footer" style="background-color: rgb(219, 87, 47);">
-                            <a href="{{ url_for('get_tasks') }}" class="modal-close  btn-flat">Cancel</a>
-                            <a href="{{ url_for('delete_task', task_id=task._id) }}" class="modal-close btn-flat">Delete</a>
-                        </div>
+                            <div class="modal-content black-text" style="background-color: rgb(219, 87, 47);">
+                                <h5> Are you sure you want to delete {{ task.task_name}}?</h5>
+                            </div>
+                            <div class="modal-footer" style="background-color: rgb(219, 87, 47);">
+                                <a href="{{ url_for('get_tasks') }}" class="modal-close  btn-flat">Cancel</a>
+                                <a href="{{ url_for('delete_task', task_id=task._id) }}"
+                                    class="modal-close btn-flat">Delete</a>
+                            </div>
                     </div>
-                        <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
+                    <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small lime darken-4">Edit</a>
                     {% endif %}
                 </div>
             </div>
             <div class="collapsible-body">
                 <strong>{{ task.category_name }}</strong>
                 <p>{{ task.task_description }}</p>
-                <a href="{{ url_for('public_profile', username=task.created_by) }}" class="btn-small lime darken-4">by: {{ task.created_by }}</a>
+                <a href="{{ url_for('public_profile', username=task.created_by) }}" class="btn-small lime darken-4">by:
+                    {{ task.created_by }}</a>
                 <p><em>by: {{ task.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
     </ul>
     {% else %}
-        <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
+    <h3 class="red-text text-darken-4 white-text-shadow center-align">No Results Found</h3>
     {% endif %}
 </div>
 {% endblock %}
