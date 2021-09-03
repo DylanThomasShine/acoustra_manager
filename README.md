@@ -240,7 +240,7 @@ The testing process can be found [here](static/images/validatorerrors.jpg).
 The results can be found [here](static/images/validatorpass2.jpg).
 <br>
 
-Test matrix on all devices attached [here](static/images/screenmatrix.jpg).
+Test matrix on all devices attached [here](static/images/screenmatrix.png).
 <br>
 I used the design goals above when the application was completed to build a set of test users stories to confirm that all functionality conformed to the requirements.
 <span id="deployment"></span>
