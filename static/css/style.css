@@ -123,6 +123,8 @@ footer {
     width: 100%;
 }
 
+/*-- modal section --*/
+
 .modal-content-verify {
     background-color: black;
 }
@@ -134,6 +136,8 @@ footer {
 .modal-close-verify {
     background-color: white;
 }
+
+/*-- main picture  section --*/
 
 .photo {
     width: 100%;

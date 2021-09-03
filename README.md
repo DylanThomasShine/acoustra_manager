@@ -4,13 +4,13 @@
 
 ![Portfolio website](static/images/logo.png)
 
-Welcome to Acoustra Manager where you get the opportunity to create your own profile directly on the band's website. You will have the means to create your own blogs and tasks and can edit, delete and update them. You will have access to available information the band have along with merchandising as well. You can select a date you may be interested in coming to see the band play or simply send in a request to see if they are available to come play in your neck of the woods.
+Welcome to Acoustra Manager where you get the opportunity to create your own profile directly on the band's website. You will have the means to create your own blogs and tasks and can edit, delete and update them. You will have access to available information the band have. You can select a date you may be interested in coming to see the band play or simply send in a request to see if they are available to come play in your neck of the woods.
 
 Acoustra Manager is designed to be user friendly and easy access and navigate around the pages. It is customisable to suit the user's needs enabling them to have full control over any input they have. The Admin's page can be viewed but cannot be edited and that also applies to each individual user, they can create their own page but cannot alter another members page or input.
 
 This project is the third out of four Milestone Projects in the Full Stack Web Development Program I am attending at The Code Institute.
 
-**[View the live project here.](https://acoustra-manager.herokuapp.com/)**
+**[View the Acoustra Manager project here.](https://acoustra-manager.herokuapp.com/)**
 
 ---
 
@@ -44,9 +44,9 @@ This project is the third out of four Milestone Projects in the Full Stack Web D
 
 - Making a full-stack site that allows users to manage a common dataset about a particular domain. 
 - Making a full-stack site that uses HTML, CSS, JavaScript, Python+Flask and MongoDB.
-
-- Creating a website that serves as a platform where people can access band information and get involved in a more personal manner. They can create stories of their own experience with the band and check for live performances. A user can also request a booking for the band.
-
+- Creating a website that serves as a platform where people can access band information and get involved in a more personal manner. 
+- The user can create stories of their own experience with the band and check for live performances.
+- The user can also request a booking for the band.
 - Creating a website that is simple to understand and easy to navigate.
 - The users of the website can make use of CRUD (create, read, update and delete) for the information they wish to include. 
 
@@ -58,20 +58,20 @@ This project is the third out of four Milestone Projects in the Full Stack Web D
 1. As a first time visitor, I want to be able to visit the website on every device, so that I can look at the website on desktop, mobile and tablet. 
 2. As a first time visitor, I want to be able to navigate easily through the website, so I can find everything with minimul effort. 
 3. As a first time visitor, I want to see an overview of all users, so I can get inspired by other people's stories or queries.
-4. As a first time visitor, I want to be able to search for options by categories, so I can easily find what I'm looking for. 
-5. As a first time visitor, I want to be able to search the site based on key words, so I can find information easily. (For example, I can search the word, blogs, tasks, gigs or bookings and those names will appear.)
-6. As a first time visitor, I want to register an account on the website, so I can share my experiences with other users
-7. As a first time visitor, I want to sign up for the newsletter. 
+4. As a first time visitor, I want to be able to search for site content, so I can easily find what I'm looking for. 
+5. As a first time visitor, I want to be able to search the site based on key words, so I can find information easily.
+6. As a first time visitor, I want to register an account on the website, so I can share my experiences with other users. 
 
 **Site member goals:** 
 
-All the goals of first-time visitors also apply for site members. There are additional user stories to the site members because they have more access to the website. See the additional user stories below. 
-1. As a site member, I want to add my blogs, so I can share my stories. 
-2. As a site member, I want to edit my blogs, so I can update information in them.
-3. As a site member, I want to delete my blogs, so I can remove them if no longer relevant. 
+All the goals of first-time visitors also apply for site members. There are additional user stories to the site members because they have more access to the website. See the additional user stories below.
+<br> 
+1. As a site member, I want to add my blogs/tasks, so I can share my stories. 
+2. As a site member, I want to edit my blogs/tasks, so I can update information in them.
+3. As a site member, I want to delete my blogs/tasks, so I can remove them if no longer relevant. 
 4. As a site member, I want to login to my profile, so I have access to my information. 
-5. As a site member, I want to logout to my profile, when I leave the site.
-6. As a site member, I want to add a task to find where the band maybe playing or request a date to book them. 
+5. As a site member, I want to logout of my profile, when I leave the site.
+6. As a site member, I want to add a task to find where the band may be playing or request a date to book them. 
 
 
 **Admin goals:**
@@ -109,18 +109,18 @@ The images I used for this project came from [Acoustra](https://www.acoustrawedd
 
     - The user is not able to break the site by clicking on buttons. 
     - The signup form: 
-        - The username has to be between 5-20 characters and only must contain letters and numbers. 
-        - The password has to be between 5-20 characters and must contain at least one number, and one uppercase and lowercase letter.
+        - The username has to be between 5-20 characters. 
+        - The password has to be between 5-20 characters.
     - The add and edit forms:
-     - The forms can be filled out to be between 1-5000 characters to allow the user to input their blog.
-        - The category has to be chosen.
-    - By the email subscriber, the email must be in the following order: characters followed by a @ symbol, followed by more characters and then a “.”.
-    - A blog, task or category can't be deleted by just one click. If someone clicks on the delete button, there wil be a pop up with a confirmation if someone is sure to delete the blog, task or category.
+     - The forms can be filled out to be between 1-3000 characters to allow the user to input their blog.
+     - The category has to be chosen.
+     - A blog, task or category can't be deleted by just one click. If someone clicks on the delete button, there wil be a pop up with a confirmation to delete the blog, task or category or else cancel back out of it.
 
 - #### Interactive design 
 
     - The website has to be easy to navigate. 
-    - The user can quickly find the information he/she wants to find. 
+    - The user can quickly find the information they want to find.
+    - The user can easily find and select social media links to the bands other platforms. 
 
 
 
@@ -138,7 +138,7 @@ Wireframe designs are made with [Balsamiq Wireframes](https://balsamiq.com/wiref
 
 Click on the link below to see the wireframes in Balsamiq.
   
-|[Acoustra Manager](static/images/acoustramanagerwireframes.pdf)| 
+|[Acoustra Manager Wireframes](static/images/acoustramanagerwireframes.pdf)| 
 
 <span id="features"></span>
 
@@ -163,7 +163,7 @@ Click on the link below to see the wireframes in Balsamiq.
 - Blogs and Tasks can be sorted by category.
 - People can search for Blogs and Tasks with the search bar. 
 - Users have access to their profile, with an overview of all their Blogs and Tasks. 
-- Blogs and Tasks include information the user wishes to share or quries they want answered.
+- Blogs and Tasks include information the user wishes to share or queries they want answered.
 
 #### 4. Signup, login and logout 
 - People can create a new account on the web application. 
@@ -179,6 +179,8 @@ Click on the link below to see the wireframes in Balsamiq.
 - Users could have the ability to upload pictures to their profile   
 - Add form validation on the backend.
 - The user can delete their profile.
+- Create a merchandising page.
+- Sign up for a newsletter option.
 
 <span id="technologies"></span>
 
@@ -242,7 +244,8 @@ The results can be found [here](static/images/validatorpass2.jpg).
 
 Test matrix on all devices attached [here](static/images/screenmatrix.png).
 <br>
-I used the design goals above when the application was completed to build a set of test users stories to confirm that all functionality conformed to the requirements.
+I used the design goals above when the application was completed to build a set of test users stories(1.2)to confirm that all functionality conformed to the requirements.
+I found errors showing up in the html validation process associated with the python code within the majority of the .html pages. The code managed perfectly without fault and without breaking. I felt it was not neccessary to attempt to clear these faults and wasn't adversed enough to know how to fully appreciate the proper means of doing so. I felt i may have broken my own coding.
 <span id="deployment"></span>
 
 
@@ -324,13 +327,14 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 Thanks to the following people and organizations who helped or inspired me for the project:  
 - The support and guidance of Kieron and Johann in Code Institute. 
 - Eoin Lynch for his incredible support throughout this project. 
+- Juan Stelling for README file inspiration.
 - The lessons and knowledge of [Code Institute.](https://codeinstitute.net/)
 
 
 <span id="Disclaimer"></span>
 
 <h1>8. Disclaimer</h1>
-This project is for educational purposes only. All rights to the content was given by Acoustra's full consent for this project.
+This project is for educational purposes only. All rights to the content was given by [Acoustra's](https://www.acoustraweddingband.com/) full consent for this project.
 
 Thank You
 
