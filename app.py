@@ -20,6 +20,12 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/blogs")
+def get_blogs():
+    tasks = list(mongo.db.tasks.find({"category_name": "Blogs"}))
+    return render_template("blogs.html", tasks=tasks)
+
+
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find())
@@ -27,12 +33,7 @@ def get_tasks():
 # a subset of tasks for only main page blog post by users
 
 
-@app.route("/blogs")
-def get_blogs():
-    tasks = list(mongo.db.tasks.find({"category_name": "Blogs"}))
-    return render_template("blogs.html", tasks=tasks)
 # main search
-
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
