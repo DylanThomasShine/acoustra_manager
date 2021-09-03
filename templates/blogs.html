@@ -12,8 +12,8 @@
 </div>
 <h3 class="white-text text-shadow  center-align">User Blog Feed</h3>
 <div class="row">
-     {% if tasks|length > 0 %}
-<ul class="collapsible">
+    {% if tasks|length > 0 %}
+    <ul class="collapsible">
         {% for task in tasks %}
         <li>
             <div class="collapsible-header white-text lime darken-4 text-shadow">
@@ -50,12 +50,17 @@
                 </div>
             </div>
             <div class="collapsible-body">
+                {% if session.user|lower is not "" %}
                 <strong>{{ task.category_name }}</strong>
                 <p>{{ task.task_description }}</p>
-                <a href="{{ url_for('public_profile', username=task.created_by) }}" class="btn-small lime darken-4">by:
-                    {{ task.created_by }}</a>
+                <a href="{{ url_for('public_profile',
+                username=task.created_by) }}" class="btn-small lime darken-4">
+                    {{ task.created_by }} Profile</a>
+                {% else %}
                 <p><em>by: {{ task.created_by }}</em></p>
+                {% endif %}
             </div>
+            
         </li>
         {% endfor %}
     </ul>
