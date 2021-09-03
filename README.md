@@ -30,7 +30,7 @@ This project is the third out of four Milestone Projects in the Full Stack Web D
 - <a href="#bugs">4b. Bugs</a>
 - <a href="#deployment">5. Deployment</a>
 - <a href="#credits">6. Credits</a>
-- <a href="#Acknowledge">7. Acknowledge</a>
+- <a href="#Acknowledge">7. Acknowledgements</a>
 - <a href="#Acknowledge">8. Disclaimer</a>
 
 ---
