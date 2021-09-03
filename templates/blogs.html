@@ -50,15 +50,9 @@
                 </div>
             </div>
             <div class="collapsible-body">
-                {% if session.user|lower is not "" %}
                 <strong>{{ task.category_name }}</strong>
                 <p>{{ task.task_description }}</p>
-                <a href="{{ url_for('public_profile',
-                username=task.created_by) }}" class="btn-small lime darken-4">
-                    {{ task.created_by }} Profile</a>
-                {% else %}
                 <p><em>by: {{ task.created_by }}</em></p>
-                {% endif %}
             </div>
             
         </li>
