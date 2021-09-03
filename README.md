@@ -10,7 +10,7 @@ Acoustra Manager is designed to be user friendly and easy access and navigate ar
 
 This project is the third out of four Milestone Projects in the Full Stack Web Development Program I am attending at The Code Institute.
 
-**[View the Acoustra Manager project here.](https://acoustra-manager.herokuapp.com/blogs)**
+**[View the Acoustra Manager project here.](https://acoustra-manager.herokuapp.com/)**
 
 ---
 
@@ -26,7 +26,8 @@ This project is the third out of four Milestone Projects in the Full Stack Web D
   - <a href="#features-existing">2.1 Existing features</a>
   - <a href="#features-future">2.2 Features left to implement in the future</a>
 - <a href="#technologies">3. Technologies used</a>
-- <a href="#testing">4. Testing</a>
+- <a href="#testing">4a. Testing</a>
+- <a href="#bugs">4b. Bugs</a>
 - <a href="#deployment">5. Deployment</a>
 - <a href="#credits">6. Credits</a>
 - <a href="#Acknowledge">7. Acknowledge</a>
@@ -52,7 +53,7 @@ This project is the third out of four Milestone Projects in the Full Stack Web D
 
 <span id="ux-stories"></span>
 
-### 1.2 User stories 
+### 1.2 User stories  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#bugs">(return).</a>
 
 **First-time visitor goals:**
 1. As a first time visitor, I want to be able to visit the website on every device, so that I can look at the website on desktop, mobile and tablet. 
@@ -181,6 +182,7 @@ Click on the link below to see the wireframes in Balsamiq.
 - The user can delete their profile.
 - Create a merchandising page.
 - Sign up for a newsletter option.
+- Adding a search by category rather than just tasks or keywords.
 
 <span id="technologies"></span>
 
@@ -235,17 +237,27 @@ Click on the link below to see the wireframes in Balsamiq.
 
 <span id="testing"></span>
 
-<h1>4. Testing</h1>
+<h1>4a. Testing</h1>
 
 The testing process can be found [here](static/images/validatorerrors.jpg).
 <br>
 The results can be found [here](static/images/validatorpass.jpg).
 <br>
-
 Test matrix on all devices attached [here](static/images/screenmatrix.png).
 <br>
-I used the design goals above when the application was completed to build a set of test users stories(1.2)to confirm that all functionality conformed to the requirements.
+
+<span id="bugs"></span>
+
+
+<h1>4b. Bugs</h1>
+
+I used the design goals above when the application was completed to build a set of test users stories<a href="#ux-stories">(1.2)</a>to confirm that all functionality conformed to the requirements.
+<br>
 I found errors showing up in the html validation process associated with jinja templating within the majority of the .html pages. The code managed perfectly without fault and without breaking. I tested the HTML code by running my server locally and used view page source. This code I passed through the validator. 
+<br>
+I tried to include a search by just category and could not get it to implement. I made attempts on mongodb to include a new search category but it would not work properly. I will try this again in a future endevour.
+<br>
+The edit and delete buttons didn't line up on every page but solved by using divs
 <span id="deployment"></span>
 
 
