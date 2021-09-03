@@ -239,13 +239,13 @@ Click on the link below to see the wireframes in Balsamiq.
 
 The testing process can be found [here](static/images/validatorerrors.jpg).
 <br>
-The results can be found [here](static/images/validatorpass2.jpg).
+The results can be found [here](static/images/validatorpass.jpg).
 <br>
 
 Test matrix on all devices attached [here](static/images/screenmatrix.png).
 <br>
 I used the design goals above when the application was completed to build a set of test users stories(1.2)to confirm that all functionality conformed to the requirements.
-I found errors showing up in the html validation process associated with the python code within the majority of the .html pages. The code managed perfectly without fault and without breaking. I felt it was not neccessary to attempt to clear these faults and wasn't adversed enough to know how to fully appreciate the proper means of doing so. I felt i may have broken my own coding.
+I found errors showing up in the html validation process associated with jinja templating within the majority of the .html pages. The code managed perfectly without fault and without breaking. I tested the HTML code by running my server locally and used view page source. This code I passed through the validator. 
 <span id="deployment"></span>
 
 
