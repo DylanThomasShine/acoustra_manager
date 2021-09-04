@@ -251,13 +251,26 @@ Test matrix on all devices attached [here](static/images/screenmatrix.png).
 
 <h1>4b. Bugs</h1>
 
+<ul>
+<li>
 I used the design goals above when the application was completed to build a set of test users stories<a href="#ux-stories">(1.2)</a>to confirm that all functionality conformed to the requirements.
-<br>
+</li>
+<li>
 I found errors showing up in the html validation process associated with jinja templating within the majority of the .html pages. The code managed perfectly without fault and without breaking. I tested the HTML code by running my server locally and used view page source. This code I passed through the validator. 
-<br>
+</li>
+<li>
 I tried to include a search by just category and could not get it to implement. I made attempts on mongodb to include a new search category but it would not work properly. I will try this again in a future endevour.
-<br>
+</li>
+<li>
 The edit and delete buttons didn't line up on every page but solved by using divs
+</li>
+<li>
+When an unregistered user not logged in browsed the main blog page they were being shown a botton that allowed them to view the users profile and blogs. This was leading to a security risk but also causing an internal server error on the profilke page because it expected a user value to be present. Fixed this with an if statement.
+</li>
+<li>
+Main banner image was not displaying correctly after push to heroku. Realised I had an absolutle reference to an image on the dev server, corrected this to fix display
+</li>
+</ul>
 <span id="deployment"></span>
 
 
@@ -346,7 +359,7 @@ Thanks to the following people and organizations who helped or inspired me for t
 <span id="Disclaimer"></span>
 
 <h1>8. Disclaimer</h1>
-This project is for educational purposes only. All rights to the content was given by [Acoustra's](https://www.acoustraweddingband.com/) full consent for this project.
+This project is for educational purposes only. All rights to the content was given by [Acoustra's.](https://www.acoustraweddingband.com/) full consent for this project.
 
 Thank You
 

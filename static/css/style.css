@@ -116,7 +116,7 @@ footer {
 }
 
 #image-header {
-    background: url("https://8080-tomato-flea-kfbazbs4.ws-eu16.gitpod.io/static/images/photogigbw.jpg");
+    background: url("../images/photogigbw.jpg");
     background-size: cover;
     background-position: center;
     height: 500px;;
