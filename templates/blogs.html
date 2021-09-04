@@ -21,7 +21,7 @@
                     <i class="fas fa-caret-down"></i>
                     <strong>{{ task.task_name }}</strong> : {{ task.due_date }} <p><em>by: {{ task.created_by }}</em>
                     </p>
-                    <!-- Dispaly urgent  -->
+                    <!-- Display urgent  -->
                     {% if task.is_urgent == "on" %}
                     <i class="fas fa-exclamation-circle black-text text-lighten-2 tooltipped" data-position="right"
                         data-tooltip="URGENT!"></i>
@@ -50,16 +50,18 @@
                 </div>
             </div>
             <div class="collapsible-body">
-                {% if 'user' not in session %}
+                {% if session.user|lower == "" %}
+                <strong>{{ task.category_name }}</strong>
+                <p>{{ task.task_description }}</p>
+                <p><em>by: {{ task.created_by }}</em></p>
+                
+                {% else %}
                 <strong>{{ task.category_name }}</strong>
                 <p>{{ task.task_description }}</p>
                 <a href="{{ url_for('public_profile',username=task.created_by) }}" class="btn-small lime darken-4">
                     {{ task.created_by }} Profile</a>
-                {% else %}
-                <p><em>by: {{ task.created_by }}</em></p>
                 {% endif %}
             </div>
-            
         </li>
         {% endfor %}
     </ul>
