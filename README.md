@@ -155,9 +155,10 @@ Click on the link below to see the wireframes in Balsamiq.
 - Showing the blogs and tasks with clarity.
 
 #### 2. General 
-- The index page shows an introduction in the shape of a logo for the band and navbar menu. And the page shows an image of the band and a link to a video.
+- The index page shows an introduction in the shape of a logo for the band and navbar menu.
+- The page shows an image of the band and a and a little subtitle.
 - There are links to the social media platforms at the bottom of the website. 
-- People can sign up for the newsletter. 
+ 
 
 #### 3. Blogs & Tasks
 - Blogs and Tasks can be created, read, updated and deleted (CRUD) by the users. 
@@ -265,7 +266,7 @@ I tried to include a search by just category and could not get it to implement. 
 The edit and delete buttons didn't line up on every page but solved by using divs
 </li>
 <li>
-When an unregistered user not logged in browsed the main blog page they were being shown a botton that allowed them to view the users profile and blogs. This was leading to a security risk but also causing an internal server error on the profilke page because it expected a user value to be present. Fixed this with an if statement.
+When an unregistered user not logged in browsed the main blog page they were being shown a botton that allowed them to view the users profile and blogs. This was leading to a security risk but also causing an internal server error on the profile page because it expected a user value to be present. Fixed this with an if statement.
 </li>
 <li>
 Main banner image was not displaying correctly after push to heroku. Realised I had an absolutle reference to an image on the dev server, corrected this to fix display
@@ -350,7 +351,7 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 <h1>7. Acknowledgements</h1>
 
 Thanks to the following people and organizations who helped or inspired me for the project:  
-- The support and guidance of Kieron and Johann in Code Institute. 
+- The support and guidance of Kieron Alexander and Johann in Code Institute. 
 - Eoin Lynch for his incredible support throughout this project. 
 - Juan Stelling for README file inspiration.
 - The lessons and knowledge of [Code Institute.](https://codeinstitute.net/)
