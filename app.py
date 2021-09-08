@@ -25,7 +25,8 @@ def get_blogs():
     tasks = list(mongo.db.tasks.find({"category_name": "Blogs"}))
     return render_template("blogs.html", tasks=tasks)
 
-    @app.route("/get_tasks")
+
+@app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
