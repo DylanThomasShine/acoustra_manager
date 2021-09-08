@@ -6,7 +6,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
-    import en 
+    import en
 
 
 app = Flask(__name__)
@@ -18,17 +18,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+
 @app.route("/")
-@app.route("/get_tasks")
-def get_tasks():
-    tasks = list(mongo.db.tasks.find())
-    return render_template("tasks.html", tasks=tasks)
-
-
 @app.route("/blogs")
 def get_blogs():
     tasks = list(mongo.db.tasks.find({"category_name": "Blogs"}))
     return render_template("blogs.html", tasks=tasks)
+
+    @app.route("/get_tasks")
+def get_tasks():
+    tasks = list(mongo.db.tasks.find())
+    return render_template("tasks.html", tasks=tasks)
 
 
 @app.route("/search", methods=["GET", "POST"])
