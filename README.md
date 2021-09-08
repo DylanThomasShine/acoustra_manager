@@ -87,13 +87,13 @@ All the goals of the first time visitors and site members also apply for the adm
 ### 1.3 Design 
 
 - #### Colour scheme 
-The five colours that are used for the Acoustra Manager website are very similar to the original website design for the band. I have chosen these colours to remain close to the original color scheme the banfd already use. 
+The five colours that are used for the Acoustra Manager website are very similar to the original website design for the band. I have chosen these colours to remain close to the original colour scheme the band already use. 
 
 ![Colour scheme](static/images/colorscheme.jpg)
 
 - **The black colour** is used for the background across all pages, this is to co-ordinate with the main colour the band use.
-- **The white colour** is used on all input pages for clear and easy to see input received from the user.The white has a striking  contrast to the black colour. 
-- **The lime colour** is the navbar and accordion dropdown selections. This colour again makes the comntrast with the black stand out more. 
+- **The white colour** is used on all input pages for clear and easy to see input received from the user.The white has a striking contrast to the black colour. 
+- **The lime colour** is the navbar and accordion dropdown selections. This colour again makes the contrast with the black stand out more. 
 - **The second lime colour** is used for the edit and delete buttons to distinquish against the existing background colours.
 - **The deep orange accent colour**  is used to show important buttons.
 
@@ -156,7 +156,7 @@ Click on the link below to see the wireframes in Balsamiq.
 
 #### 2. General 
 - The index page shows an introduction in the shape of a logo for the band and navbar menu.
-- The page shows an image of the band and a and a little subtitle.
+- The page shows an image of the band and a little message in the subtitle.
 - There are links to the social media platforms at the bottom of the website. 
  
 
@@ -171,13 +171,13 @@ Click on the link below to see the wireframes in Balsamiq.
 - People can create a new account on the web application. 
 - People can login with their existing accounts. 
 - People can easily log out.
-- If a person creates a new account, logs in or logs out, a flashed message will appear with the action the person has done. 
+- If a person creates a new account, logs in or logs out, a flashed message will appear with the action that person has taken. 
 
 <span id="features-future"></span>
 
 ### 2.2 Features left to implement in the future 
 - A proper method to respond to a member.
-- Adding a favorite section. Users can favorite a Blog or Task and see them on their favorite page. 
+- Adding a favourite section. Users can favourite a Blog or Task and see them on their favourite page. 
 - Users could have the ability to upload pictures to their profile   
 - Add form validation on the backend.
 - The user can delete their profile.
@@ -360,7 +360,7 @@ Thanks to the following people and organizations who helped or inspired me for t
 <span id="Disclaimer"></span>
 
 <h1>8. Disclaimer</h1>
-This project is for educational purposes only. All rights to the content was given by [Acoustra's.](https://www.acoustraweddingband.com/) full consent for this project.
+This project is for educational purposes only. All rights to the content was given by [Acoustra's](https://www.acoustraweddingband.com/) full consent for this project.
 
 Thank You
 
