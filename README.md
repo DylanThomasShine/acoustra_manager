@@ -9,6 +9,15 @@ Welcome to Acoustra Manager where you get the opportunity to create your own pro
 Acoustra Manager is designed to be user friendly and easy access and navigate around the pages. It is customisable to suit the user's needs enabling them to have full control over any input they have. The Admin's page can be viewed but cannot be edited and that also applies to each individual user, they can create their own page but cannot alter another members page or input.
 
 This project is the third out of four Milestone Projects in the Full Stack Web Development Program I am attending at The Code Institute.
+<br><br>
+
+<h1><strong>AMMENDED ERRORS</strong></h1>
+<details><summary><strong>PLEASE CLICK HERE </strong></summary>
+<br><br>
+
+![Click here to view the amended errors and the images associated with them](static/images/updatedfix.jpg)
+</details>
+<br><br>
 
 **[View the Acoustra Manager project here.](https://acoustra-manager.herokuapp.com/)**
 
