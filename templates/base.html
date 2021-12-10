@@ -131,7 +131,7 @@
 
         <ul class="sidenav text-shadow white-text" id="mobile-demo">
             <li>
-                <h3 class="center-align white-text text-shadow lime darken-4">Acoustra Manager</h3>
+                <h5 class="center-align white-text text-shadow lime darken-4">Acoustra Manager</h5>
             </li>
             <li><a href="{{ url_for('get_blogs') }}">Home</a></li>
             {% if session.user|lower == "admin"|lower %}
@@ -150,9 +150,8 @@
             {% endif %}
         </ul>
     </header>
-    <section>
-
-        <!-- flash messages -->
+    
+       <!-- flash messages -->
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -163,7 +162,7 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
-    </section>
+    
     <main class="container">
         {% block content %}
         {% endblock %}
