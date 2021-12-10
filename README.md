@@ -369,7 +369,8 @@ Thanks to the following people and organizations who helped or inspired me for t
 <span id="Disclaimer"></span>
 
 <h1>8. Disclaimer</h1>
-This project is for educational purposes only. All rights to the content was given by [Acoustra's](https://www.acoustraweddingband.com/) full consent for this project.
+
+This project is for educational purposes only. All rights to the content used and was given by [Acoustra's.](https://www.acoustraweddingband.com/) full consent.
 
 Thank You
 
