@@ -19,7 +19,7 @@
                         data-tooltip="URGENT!"></i>
                     {% endif %}
                 </div>
-                <div class="col s4" float="right">
+                <div class="col s4 fr">
                     {% if session.user|lower == task.created_by|lower %}
                     <a class="modal-trigger change-button btn-small lime darken-1"
                         href="#modal{{ loop.index }}">Delete</a>
