@@ -30,6 +30,23 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+#question2 {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#question3 {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#question4 {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
 .brand-logo {
     margin-left: 10px;
 }
